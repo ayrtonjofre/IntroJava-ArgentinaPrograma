@@ -14,15 +14,14 @@ import java.util.Scanner;
 
 public class ProductoServicios {
 
-    HashMap<String, Double> productos = new HashMap();
-    Scanner read = new Scanner(System.in).useDelimiter("\n");
+    private HashMap<String, Double> productos = new HashMap();
+    private Scanner read = new Scanner(System.in).useDelimiter("\n");
 
     public void introducirElemento() {
         System.out.println("Ingrese el nombre del producto:");
         String nombre = read.next();
         System.out.println("Ingrese el precio del producto:");
         Double precio = read.nextDouble();
-
         productos.put(nombre, precio);
         System.out.println("Producto agregado con exito.");
 
@@ -31,11 +30,9 @@ public class ProductoServicios {
     public void modificarPrecio() {
         System.out.print("Ingrese el nombre del producto a modificar: ");
         String nombre = read.next();
-
         if (productos.containsKey(nombre)) {
             System.out.print("Ingrese el nuevo precio del producto: ");
             double precio = read.nextDouble();
-
             productos.put(nombre, precio);
             System.out.println("Precio del producto modificado con éxito.");
         } else {
@@ -46,7 +43,6 @@ public class ProductoServicios {
     public void eliminarProducto() {
         System.out.print("Ingrese el nombre del producto a eliminar: ");    
         String nombre = read.next();
-
         if (productos.containsKey(nombre)) {
             productos.remove(nombre);
             System.out.println("Producto eliminado con éxito.");
@@ -57,7 +53,6 @@ public class ProductoServicios {
 
 public void mostrarProductos() {
         System.out.println("=== PRODUCTOS ===");
-
         if (productos.isEmpty()) {
             System.out.println("No hay productos registrados.");
         } else {

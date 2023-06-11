@@ -58,7 +58,7 @@ public class AdivinarMesSecreto {
             String resp = read.next().toLowerCase();
             
             if (resp.equals(mesSecreto)) {
-                System.out.println("Acertaste el mes capiño!");
+                System.out.println("Acertaste el mes capiño!, you are a genius");
                 break;
             } else {
                 System.out.println("Erraste, intente nuevamente manito!");
@@ -67,7 +67,7 @@ public class AdivinarMesSecreto {
 
         } while (cont < 3);
         
-        System.out.println("Game Over");
+        System.out.println("Game Over, mostri");
         if (cont == 3) {
             System.out.println("Se terminaron las chances manito.");
             System.out.println(mesSecreto);

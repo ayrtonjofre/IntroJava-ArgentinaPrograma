@@ -60,7 +60,7 @@ public class ServicePaises {
             }
         }
 
-        if (flag = true) {
+        if (flag) {
             System.out.println( aux + " fue eliminado");
         } else {
             System.out.println(aux + " no fue encontrado");

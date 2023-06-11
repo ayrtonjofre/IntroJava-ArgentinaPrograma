@@ -11,8 +11,10 @@ package Entidades;
 import java.util.Date;
 
 public class Personas {
+
     private String nombre;
     private Date nacimiento;
+    private String sexo;
 
     public Personas() {
     }
@@ -38,12 +40,17 @@ public class Personas {
         this.nacimiento = nacimiento;
     }
 
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
     @Override
     public String toString() {
-        return "Personas{" + "nombre=" + nombre + ", nacimiento=" + nacimiento + '}';
+        return "Personas{" + "Nombre: " + nombre + ", Nacimiento: " + nacimiento + ", Sexo: " + sexo + '}';
     }
-    
-    
-    
-    
+
 }

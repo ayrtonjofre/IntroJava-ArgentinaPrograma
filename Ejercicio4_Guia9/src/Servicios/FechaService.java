@@ -45,17 +45,5 @@ public class FechaService {
             anios--;
         }
         System.out.println("La diferencia de años entre las dos fechas es: " + anios);
-        
-        
-        /*
-        public int diferencia(Date fechaNacimiento, Date fechaActual) {
-        int edad = fechaActual.getYear() - fechaNacimiento.getYear();
-        if (fechaActual.getMonth() < fechaNacimiento.getMonth() || (fechaActual.getMonth() == fechaNacimiento.getMonth() && fechaNacimiento.getDay() > fechaActual.getDay())) {
-            edad--;
-        }
-        return edad;
-    }
-        */
-        
     }
 }
