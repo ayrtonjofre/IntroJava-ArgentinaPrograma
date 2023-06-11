@@ -16,9 +16,9 @@ public class Ejercicio2_Guia10 {
     public static void main(String[] args) {
         ArrayList<String> lista = new ArrayList();
         Scanner read = new Scanner(System.in).useDelimiter("\n");
-
+        
         do {
-            System.out.println("Por favor ingrese un dog!");
+            System.out.println("Por favor ingrese un dogsinho!");
             lista.add(read.next());
             System.out.println("Desea ingresar otro perro S/N ?");
         } while (read.next().equalsIgnoreCase("S"));
@@ -32,6 +32,7 @@ public class Ejercicio2_Guia10 {
         String resp = read.next();
         while (iterador.hasNext()) {
             if (iterador.next().equals(resp)) {
+                System.out.println("Siuuuuuu");
                 iterador.remove();
             }
         }
