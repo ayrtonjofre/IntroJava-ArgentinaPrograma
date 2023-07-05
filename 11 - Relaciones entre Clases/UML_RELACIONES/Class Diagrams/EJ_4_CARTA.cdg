@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Entidades">
+  <ClassDiagramComponents>
+    <Class name="Carta" package="Entidades" visibility="public" xPosition="150.0" yPosition="76.0">
+      <Fields>
+        <Field name="numero" type="Integer" visibility="private"/>
+        <Field name="palo" type="Palos" visibility="private"/>
+        <Field name="mazo" type="ArrayList&lt;Carta&gt;" visibility="private"/>
+        <Field name="descarte" type="ArrayList&lt;Carta&gt;" visibility="private"/>
+        <Field name="sc" type="Scanner" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="numero"/>
+          <Argument type="Palos" name="palo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="create" returnType="void" visibility="public"/>
+        <Method name="barajar" returnType="void" visibility="public"/>
+        <Method name="siguienteCarta" returnType="void" visibility="public"/>
+        <Method name="cartasDisponibles" returnType="void" visibility="public"/>
+        <Method name="darCartas" returnType="void" visibility="public"/>
+        <Method name="cartasMonton" returnType="void" visibility="public"/>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+        <Method name="menu" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Enum name="Palos" package="Entidades" visibility="public" xPosition="702.0" yPosition="60.0">
+      <Literals>
+        <Literal name="ORO"/>
+        <Literal name="BASTO"/>
+        <Literal name="COPA"/>
+        <Literal name="ESPADA"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="mazo" source="Entidades.Carta" target="Entidades.Carta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Carta&gt;"/>
+    <HasRelation name="palo" source="Entidades.Carta" target="Entidades.Palos" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="descarte" source="Entidades.Carta" target="Entidades.Carta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Carta&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

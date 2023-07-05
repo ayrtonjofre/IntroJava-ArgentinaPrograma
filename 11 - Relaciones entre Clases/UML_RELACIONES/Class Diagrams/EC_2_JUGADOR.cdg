@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Entidades">
+  <ClassDiagramComponents>
+    <Class name="Players" package="Entidades" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="surname" type="String" visibility="private"/>
+        <Field name="position" type="String" visibility="private"/>
+        <Field name="number" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="surname"/>
+          <Argument type="String" name="position"/>
+          <Argument type="Integer" name="number"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getSurname" returnType="String" visibility="public"/>
+        <Method name="setSurname" returnType="void" visibility="public">
+          <Argument type="String" name="surname"/>
+        </Method>
+        <Method name="getPosition" returnType="String" visibility="public"/>
+        <Method name="setPosition" returnType="void" visibility="public">
+          <Argument type="String" name="position"/>
+        </Method>
+        <Method name="getNumber" returnType="Integer" visibility="public"/>
+        <Method name="setNumber" returnType="void" visibility="public">
+          <Argument type="Integer" name="number"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Team" package="Entidades" visibility="public" xPosition="487.0" yPosition="105.0">
+      <Fields>
+        <Field name="te" type="List&lt;Players&gt;" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="List&lt;Players&gt;" name="te"/>
+          <Argument type="String" name="name"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="List&lt;Players&gt;" name="te"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getTe" returnType="List&lt;Players&gt;" visibility="public"/>
+        <Method name="setTe" returnType="void" visibility="public">
+          <Argument type="List&lt;Players&gt;" name="te"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Entidades.Team" target="Entidades.Players" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="te" source="Entidades.Team" target="Entidades.Players" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Players&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

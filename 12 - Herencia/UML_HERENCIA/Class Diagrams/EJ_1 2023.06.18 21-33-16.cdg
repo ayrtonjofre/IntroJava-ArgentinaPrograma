@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="EJ_1">
+  <ClassDiagramComponents>
+    <Class name="Animal" package="Entidades" visibility="public" xPosition="855.0" yPosition="151.0">
+      <Fields>
+        <Field name="name" type="String" visibility="protected"/>
+        <Field name="age" type="Integer" visibility="protected"/>
+        <Field name="type" type="String" visibility="protected"/>
+        <Field name="colour" type="String" visibility="protected"/>
+        <Field name="siz" type="Size" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="Integer" name="age"/>
+          <Argument type="String" name="type"/>
+          <Argument type="String" name="colour"/>
+          <Argument type="Size" name="siz"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="createAnimal" returnType="Animal" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cat" package="Entidades" visibility="public" xPosition="18.0" yPosition="477.0">
+      <Fields>
+        <Field name="brandFood" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="brandFood"/>
+          <Argument type="String" name="name"/>
+          <Argument type="Integer" name="age"/>
+          <Argument type="String" name="type"/>
+          <Argument type="String" name="colour"/>
+          <Argument type="Size" name="siz"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="createAnimal" returnType="Animal" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Dog" package="Entidades" visibility="public" xPosition="202.0" yPosition="792.0">
+      <Fields>
+        <Field name="fur" type="Integer" visibility="private"/>
+        <Field name="tail" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="fur"/>
+          <Argument type="Integer" name="tail"/>
+          <Argument type="String" name="name"/>
+          <Argument type="Integer" name="age"/>
+          <Argument type="String" name="type"/>
+          <Argument type="String" name="colour"/>
+          <Argument type="Size" name="siz"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="createAnimal" returnType="Animal" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Fish" package="Entidades" visibility="public" xPosition="1565.0" yPosition="434.0">
+      <Fields>
+        <Field name="typeOfShape" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="typeOfShape"/>
+          <Argument type="String" name="name"/>
+          <Argument type="Integer" name="age"/>
+          <Argument type="String" name="type"/>
+          <Argument type="String" name="colour"/>
+          <Argument type="Size" name="siz"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="createAnimal" returnType="Animal" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Parrot" package="Entidades" visibility="public" xPosition="1475.0" yPosition="792.0">
+      <Fields>
+        <Field name="size" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="size"/>
+          <Argument type="String" name="name"/>
+          <Argument type="Integer" name="age"/>
+          <Argument type="String" name="type"/>
+          <Argument type="String" name="colour"/>
+          <Argument type="Size" name="siz"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="createAnimal" returnType="Animal" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Rabbit" package="Entidades" visibility="public" xPosition="855.0" yPosition="792.0">
+      <Fields>
+        <Field name="sizeTeeth" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="sizeTeeth"/>
+          <Argument type="String" name="name"/>
+          <Argument type="Integer" name="age"/>
+          <Argument type="String" name="type"/>
+          <Argument type="String" name="colour"/>
+          <Argument type="Size" name="siz"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="createAnimal" returnType="Animal" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EJ_1" package="Main" visibility="public" xPosition="948.0" yPosition="23.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Adoption" package="Service" visibility="public" xPosition="488.0" yPosition="163.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="menu" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Enum name="Size" package="Enum" visibility="public" xPosition="1628.0" yPosition="163.0">
+      <Literals>
+        <Literal name="BIG"/>
+        <Literal name="SMALL"/>
+        <Literal name="MEDIUM"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Entidades.Parrot" target="Entidades.Animal"/>
+    <IsRelation name="is" source="Entidades.Cat" target="Entidades.Animal"/>
+    <UseRelation source="Entidades.Rabbit" target="Entidades.Animal" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidades.Fish" target="Entidades.Animal" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidades.Animal" target="Entidades.Animal" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Entidades.Rabbit" target="Entidades.Animal"/>
+    <HasRelation name="siz" source="Entidades.Animal" target="Enum.Size" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Entidades.Fish" target="Entidades.Animal"/>
+    <UseRelation source="Entidades.Cat" target="Entidades.Animal" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidades.Dog" target="Entidades.Animal" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidades.Parrot" target="Entidades.Animal" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Entidades.Dog" target="Entidades.Animal"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

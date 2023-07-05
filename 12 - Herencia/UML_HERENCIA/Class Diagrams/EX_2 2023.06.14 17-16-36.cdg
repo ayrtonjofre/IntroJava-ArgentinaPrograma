@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="EX_2">
+  <ClassDiagramComponents>
+    <Class name="Edificio" package="Entidades" visibility="public" isAbstract="true" xPosition="615.0" yPosition="58.0">
+      <Fields>
+        <Field name="ancho" type="Double" visibility="protected"/>
+        <Field name="alto" type="Double" visibility="protected"/>
+        <Field name="largo" type="Double" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Double" name="ancho"/>
+          <Argument type="Double" name="alto"/>
+          <Argument type="Double" name="largo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="calcularSuperficie" returnType="double" visibility="public" isAbstract="true"/>
+        <Method name="calcularVolumen" returnType="double" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="EdificioDeOficinas" package="Entidades" visibility="public" xPosition="920.0" yPosition="490.0">
+      <Fields>
+        <Field name="empresa" type="String" visibility="private"/>
+        <Field name="oficinas" type="Integer" visibility="private"/>
+        <Field name="perxoficinas" type="Integer" visibility="private"/>
+        <Field name="pisos" type="Integer" visibility="private"/>
+        <Field name="sc" type="Scanner" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="empresa"/>
+          <Argument type="Integer" name="oficinas"/>
+          <Argument type="Integer" name="perxoficinas"/>
+          <Argument type="Integer" name="pisos"/>
+          <Argument type="Double" name="ancho"/>
+          <Argument type="Double" name="alto"/>
+          <Argument type="Double" name="largo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getEmpresa" returnType="String" visibility="public"/>
+        <Method name="getOficinas" returnType="Integer" visibility="public"/>
+        <Method name="getPerxoficinas" returnType="Integer" visibility="public"/>
+        <Method name="getPisos" returnType="Integer" visibility="public"/>
+        <Method name="calcularSuperficie" returnType="double" visibility="public"/>
+        <Method name="calcularVolumen" returnType="double" visibility="public"/>
+        <Method name="cantPersonas" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Polideportivo" package="Entidades" visibility="public" xPosition="76.0" yPosition="452.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="techo" type="Boolean" visibility="private"/>
+        <Field name="sc" type="Scanner" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="Boolean" name="techo"/>
+          <Argument type="Double" name="ancho"/>
+          <Argument type="Double" name="alto"/>
+          <Argument type="Double" name="largo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getTecho" returnType="Boolean" visibility="public"/>
+        <Method name="calcularSuperficie" returnType="double" visibility="public"/>
+        <Method name="calcularVolumen" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EX_2" package="Main" visibility="public" xPosition="76.0" yPosition="58.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Service" package="Service" visibility="public" xPosition="1434.0" yPosition="58.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="all" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Entidades.EdificioDeOficinas" target="Entidades.Edificio"/>
+    <IsRelation name="is" source="Entidades.Polideportivo" target="Entidades.Edificio"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

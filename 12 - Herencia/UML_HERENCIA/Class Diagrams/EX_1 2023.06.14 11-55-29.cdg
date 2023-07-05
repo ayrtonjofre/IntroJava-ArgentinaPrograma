@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="EX_1">
+  <ClassDiagramComponents>
+    <Class name="Alquiler" package="Entidades" visibility="public" xPosition="330.0" yPosition="71.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="fechaAlq" type="LocalDate" visibility="private"/>
+        <Field name="fechaDev" type="LocalDate" visibility="private"/>
+        <Field name="pos" type="int" visibility="private"/>
+        <Field name="diff" type="int" visibility="private"/>
+        <Field name="bar" type="Barco" visibility="private"/>
+        <Field name="sc" type="Scanner" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="LocalDate" name="fechaAlq"/>
+          <Argument type="LocalDate" name="fechaDev"/>
+          <Argument type="int" name="pos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getBar" returnType="Barco" visibility="public"/>
+        <Method name="setBar" returnType="void" visibility="public">
+          <Argument type="Barco" name="bar"/>
+        </Method>
+        <Method name="getDiff" returnType="int" visibility="public"/>
+        <Method name="setDiff" returnType="void" visibility="public">
+          <Argument type="int" name="diff"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="crearAlquiler" returnType="Alquiler" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Barco" package="Entidades" visibility="public" xPosition="1105.0" yPosition="71.0">
+      <Fields>
+        <Field name="matricula" type="String" visibility="protected"/>
+        <Field name="eslora" type="Double" visibility="protected"/>
+        <Field name="anioFabric" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="matricula"/>
+          <Argument type="Double" name="eslora"/>
+          <Argument type="Integer" name="anioFabric"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMatricula" returnType="String" visibility="public"/>
+        <Method name="setMatricula" returnType="void" visibility="public">
+          <Argument type="String" name="matricula"/>
+        </Method>
+        <Method name="getEslora" returnType="Double" visibility="public"/>
+        <Method name="setEslora" returnType="void" visibility="public">
+          <Argument type="Double" name="eslora"/>
+        </Method>
+        <Method name="getAnioFabric" returnType="Integer" visibility="public"/>
+        <Method name="setAnioFabric" returnType="void" visibility="public">
+          <Argument type="Integer" name="anioFabric"/>
+        </Method>
+        <Method name="crearBarco" returnType="Barco" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Lancha" package="Entidades" visibility="public" xPosition="467.0" yPosition="564.0">
+      <Fields>
+        <Field name="potencia" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="potencia"/>
+          <Argument type="String" name="matricula"/>
+          <Argument type="Double" name="eslora"/>
+          <Argument type="Integer" name="anioFabric"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPotencia" returnType="Integer" visibility="public"/>
+        <Method name="setPotencia" returnType="void" visibility="public">
+          <Argument type="Integer" name="potencia"/>
+        </Method>
+        <Method name="crearLancha" returnType="Lancha" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Velero" package="Entidades" visibility="public" xPosition="1121.0" yPosition="712.0">
+      <Fields>
+        <Field name="mastiles" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="mastiles"/>
+          <Argument type="String" name="matricula"/>
+          <Argument type="Double" name="eslora"/>
+          <Argument type="Integer" name="anioFabric"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMastiles" returnType="Integer" visibility="public"/>
+        <Method name="setMastiles" returnType="void" visibility="public">
+          <Argument type="Integer" name="mastiles"/>
+        </Method>
+        <Method name="crearVelero" returnType="Velero" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Yate" package="Entidades" visibility="public" xPosition="423.0" yPosition="844.0">
+      <Fields>
+        <Field name="camarotes" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="camarotes"/>
+          <Argument type="Integer" name="potencia"/>
+          <Argument type="String" name="matricula"/>
+          <Argument type="Double" name="eslora"/>
+          <Argument type="Integer" name="anioFabric"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCamarotes" returnType="Integer" visibility="public"/>
+        <Method name="setCamarotes" returnType="void" visibility="public">
+          <Argument type="Integer" name="camarotes"/>
+        </Method>
+        <Method name="getPotencia" returnType="Integer" visibility="public"/>
+        <Method name="setPotencia" returnType="void" visibility="public">
+          <Argument type="Integer" name="potencia"/>
+        </Method>
+        <Method name="crearYate" returnType="Yate" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EX_1" package="Main" visibility="public" xPosition="1691.0" yPosition="277.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="All" package="Service" visibility="public" xPosition="1746.0" yPosition="477.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="menu" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Entidades.Alquiler" target="Entidades.Barco" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Entidades.Yate" target="Entidades.Lancha"/>
+    <UseRelation source="Entidades.Yate" target="Entidades.Yate" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Entidades.Velero" target="Entidades.Barco"/>
+    <UseRelation source="Entidades.Barco" target="Entidades.Barco" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidades.Velero" target="Entidades.Velero" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidades.Lancha" target="Entidades.Lancha" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Entidades.Lancha" target="Entidades.Barco"/>
+    <HasRelation name="bar" source="Entidades.Alquiler" target="Entidades.Barco" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidades.Alquiler" target="Entidades.Alquiler" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

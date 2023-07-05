@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="EX_4">
+  <ClassDiagramComponents>
+    <Class name="Employee" package="Entidades" visibility="public" xPosition="418.0" yPosition="1075.0">
+      <Fields>
+        <Field name="yearEnter" type="Integer" visibility="protected"/>
+        <Field name="office" type="Integer" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="yearEnter"/>
+          <Argument type="Integer" name="office"/>
+          <Argument type="String" name="completeName"/>
+          <Argument type="Integer" name="id"/>
+          <Argument type="MaritalStatus" name="est"/>
+          <Argument type="Integer" name="age"/>
+          <Argument type="Sex" name="s"/>
+          <Argument type="Integer" name="cellNum"/>
+          <Argument type="String" name="adress"/>
+          <Argument type="Integer" name="adressNum"/>
+          <Argument type="String" name="nationality"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="createPerson" returnType="Person" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="changeOffice" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Person" package="Entidades" visibility="public" xPosition="1556.0" yPosition="50.0">
+      <Fields>
+        <Field name="completeName" type="String" visibility="protected"/>
+        <Field name="id" type="Integer" visibility="protected"/>
+        <Field name="est" type="MaritalStatus" visibility="protected"/>
+        <Field name="age" type="Integer" visibility="protected"/>
+        <Field name="s" type="Sex" visibility="protected"/>
+        <Field name="cellNum" type="Integer" visibility="protected"/>
+        <Field name="adress" type="String" visibility="protected"/>
+        <Field name="adressNum" type="Integer" visibility="protected"/>
+        <Field name="nationality" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="completeName"/>
+          <Argument type="Integer" name="id"/>
+          <Argument type="MaritalStatus" name="est"/>
+          <Argument type="Integer" name="age"/>
+          <Argument type="Sex" name="s"/>
+          <Argument type="Integer" name="cellNum"/>
+          <Argument type="String" name="adress"/>
+          <Argument type="Integer" name="adressNum"/>
+          <Argument type="String" name="nationality"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCompleteName" returnType="String" visibility="public"/>
+        <Method name="createPerson" returnType="Person" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="changeRelationship" returnType="MaritalStatus" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Staff" package="Entidades" visibility="public" xPosition="721.0" yPosition="1553.0">
+      <Fields>
+        <Field name="sec" type="Sections" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Sections" name="sec"/>
+          <Argument type="Integer" name="yearEnter"/>
+          <Argument type="Integer" name="office"/>
+          <Argument type="String" name="completeName"/>
+          <Argument type="Integer" name="id"/>
+          <Argument type="MaritalStatus" name="est"/>
+          <Argument type="Integer" name="age"/>
+          <Argument type="Sex" name="s"/>
+          <Argument type="Integer" name="cellNum"/>
+          <Argument type="String" name="adress"/>
+          <Argument type="Integer" name="adressNum"/>
+          <Argument type="String" name="nationality"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="createPerson" returnType="Person" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="changeOffice" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Student" package="Entidades" visibility="public" xPosition="26.0" yPosition="698.0">
+      <Fields>
+        <Field name="subject" type="List" visibility="private"/>
+        <Field name="pay" type="Boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="List" name="subject"/>
+          <Argument type="Boolean" name="pay"/>
+          <Argument type="String" name="completeName"/>
+          <Argument type="Integer" name="id"/>
+          <Argument type="MaritalStatus" name="est"/>
+          <Argument type="Integer" name="age"/>
+          <Argument type="Sex" name="s"/>
+          <Argument type="Integer" name="cellNum"/>
+          <Argument type="String" name="adress"/>
+          <Argument type="Integer" name="adressNum"/>
+          <Argument type="String" name="nationality"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="createPerson" returnType="Person" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="changeAssignature" returnType="List" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Teacher" package="Entidades" visibility="public" xPosition="2014.0" yPosition="1075.0">
+      <Fields>
+        <Field name="dep" type="Deanships" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Deanships" name="dep"/>
+          <Argument type="Integer" name="yearEnter"/>
+          <Argument type="Integer" name="office"/>
+          <Argument type="String" name="completeName"/>
+          <Argument type="Integer" name="id"/>
+          <Argument type="MaritalStatus" name="est"/>
+          <Argument type="Integer" name="age"/>
+          <Argument type="Sex" name="s"/>
+          <Argument type="Integer" name="cellNum"/>
+          <Argument type="String" name="adress"/>
+          <Argument type="Integer" name="adressNum"/>
+          <Argument type="String" name="nationality"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="createPerson" returnType="Person" visibility="public"/>
+        <Method name="changeOffice" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EX_4" package="Main" visibility="public" xPosition="475.0" yPosition="385.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="University" package="Service" visibility="public" xPosition="174.0" yPosition="150.0">
+      <Fields>
+        <Field name="people" type="List&lt;Person&gt;" visibility="private"/>
+        <Field name="sc" type="Scanner" visibility="private"/>
+        <Field name="p" type="Person" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="options" returnType="void" visibility="public"/>
+        <Method name="register" returnType="void" visibility="public"/>
+        <Method name="createEmployee" returnType="void" visibility="public"/>
+        <Method name="changeData" returnType="void" visibility="public"/>
+        <Method name="seeData" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Enum name="Deanships" package="Enums" visibility="public" xPosition="3076.0" yPosition="611.0">
+      <Literals>
+        <Literal name="MATH"/>
+        <Literal name="LITERATURE"/>
+        <Literal name="SCIENCE"/>
+        <Literal name="PSICOLOGY"/>
+        <Literal name="GEOGRAPHY"/>
+        <Literal name="ART"/>
+        <Literal name="POLITICS"/>
+        <Literal name="COMMUNICATION"/>
+        <Literal name="LAW"/>
+      </Literals>
+    </Enum>
+    <Enum name="MaritalStatus" package="Enums" visibility="public" xPosition="754.0" yPosition="301.0">
+      <Literals>
+        <Literal name="MARRIED"/>
+        <Literal name="SINGLE"/>
+        <Literal name="WIDOWED"/>
+        <Literal name="SEPARATED"/>
+        <Literal name="ENGAGED"/>
+        <Literal name="CIVIL_UNION"/>
+      </Literals>
+    </Enum>
+    <Enum name="Sections" package="Enums" visibility="public" xPosition="1526.0" yPosition="1352.0">
+      <Literals>
+        <Literal name="LIBRARY"/>
+        <Literal name="INVESTIGATION"/>
+        <Literal name="HUMAN_RESOURCES"/>
+        <Literal name="PUBLIC_RELATIONS"/>
+      </Literals>
+    </Enum>
+    <Enum name="Sex" package="Enums" visibility="public" xPosition="581.0" yPosition="38.0">
+      <Literals>
+        <Literal name="MEN"/>
+        <Literal name="WOMEN"/>
+        <Literal name="OTHER"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Entidades.Teacher" target="Entidades.Employee"/>
+    <IsRelation name="is" source="Entidades.Staff" target="Entidades.Employee"/>
+    <HasRelation name="est" source="Entidades.Person" target="Enums.MaritalStatus" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="p" source="Service.University" target="Entidades.Person" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="people" source="Service.University" target="Entidades.Person" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Person&gt;"/>
+    <HasRelation name="dep" source="Entidades.Teacher" target="Enums.Deanships" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidades.Teacher" target="Entidades.Person" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidades.Staff" target="Entidades.Person" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sec" source="Entidades.Staff" target="Enums.Sections" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidades.Person" target="Enums.MaritalStatus" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidades.Employee" target="Entidades.Person" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Entidades.Employee" target="Entidades.Person"/>
+    <UseRelation source="Entidades.Student" target="Entidades.Person" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidades.Person" target="Entidades.Person" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="s" source="Entidades.Person" target="Enums.Sex" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Entidades.Student" target="Entidades.Person"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
